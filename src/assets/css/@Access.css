@@ -11,6 +11,15 @@ body {
     border: 1px solid #DFE0EB;
     box-sizing: border-box;
     border-radius: 8px;
+    width: 25%;
+    min-height: 450px;
+    max-height: 450px;
+}
+.main__access {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3%;
 }
 .h1__access {
     font-weight: 700;

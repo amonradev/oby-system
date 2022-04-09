@@ -7,8 +7,10 @@ import { Title } from "../../components/@Access/Title";
 
 export const Login = () => {
     return (
-        <div className="card__access">
-            <h1>boraa</h1>
+        <div className="main__access">
+            <div className="card__access">
+                <h1>boraa</h1>
+            </div>
         </div>
     )
 }
