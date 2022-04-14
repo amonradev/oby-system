@@ -1,11 +1,6 @@
 body {
     background-color: #162652;
 }
-.button__submit {
-    background-color: #162652;
-    border-radius: 8px;
-    box-shadow: 0px 4px 12px rgba(55, 81, 255, 0.24);
-}
 .card__access {
     background-color: #fff;
     border: 1px solid #DFE0EB;
@@ -20,39 +15,4 @@ body {
     align-items: center;
     justify-content: center;
     margin-top: 3%;
-}
-.h1__access {
-    font-weight: 700;
-    font-size: 30px;
-    line-height: 44px;
-    color: #162652;
-    font-style: normal;
-    text-align: center;
-}
-.h3__access {
-    font-style: normal;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 20px;
-    text-align: center;
-    letter-spacing: 0.3px;
-    color: #162652;
-}
-.div__input__access {
-    display: flex;
-    flex-direction: column;
-}
-.label__input__access {
-    font-style: normal;
-    font-weight: 700;
-    font-size: 12px;
-    line-height: 15px;
-    letter-spacing: 0.3px;
-    text-transform: uppercase;
-}
-.input__access {
-    background: #FCFDFE;
-    border: 1px solid #162652;
-    box-sizing: border-box;
-    border-radius: 8px;
 }

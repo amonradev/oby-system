@@ -1,0 +1,18 @@
+.div__input__access {
+    display: flex;
+    flex-direction: column;
+}
+.label__input__access {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+}
+.input__access {
+    background: #FCFDFE;
+    border: 1px solid #162652;
+    box-sizing: border-box;
+    border-radius: 8px;
+}
