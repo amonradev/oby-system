@@ -1,5 +1,18 @@
 .button__submit {
     background-color: #162652;
-    border-radius: 8px;
+    border-radius: 4px;
     box-shadow: 0px 4px 12px rgba(55, 81, 255, 0.24);
+    width: 100%;
+    border: none;
+    color: #fff;
+    font-family: 'Mulish', sans-serif;
+    font-weight: 500;
+    padding: 10px;
+    font-size: 12px;
+}
+.card__button {
+    margin-top: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

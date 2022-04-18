@@ -1,18 +1,26 @@
 .div__input__access {
     display: flex;
     flex-direction: column;
+    margin-top: 15px;
 }
 .label__input__access {
     font-style: normal;
-    font-weight: 700;
-    font-size: 12px;
-    line-height: 15px;
-    letter-spacing: 0.3px;
+    font-weight: 600;
+    font-size: 11px;
     text-transform: uppercase;
+    color: #162652;
+    font-family: 'Mulish', sans-serif;
+    margin-bottom: 5px;
 }
 .input__access {
     background: #FCFDFE;
     border: 1px solid #162652;
     box-sizing: border-box;
-    border-radius: 8px;
+    border-radius: 4px;
+    padding: 6px;
+    font-family: 'Mulish', sans-serif;
+}
+.input__access::placeholder {
+    color: #a3a3a3;
+    font-size: 11px;
 }

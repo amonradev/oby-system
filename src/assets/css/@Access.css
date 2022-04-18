@@ -1,18 +1,28 @@
 body {
     background-color: #162652;
+    font-family: 'Mulish', sans-serif;
 }
 .card__access {
     background-color: #fff;
     border: 1px solid #DFE0EB;
     box-sizing: border-box;
     border-radius: 8px;
-    width: 25%;
-    min-height: 450px;
-    max-height: 450px;
+    width: 32%;
+    min-height: 400px;
+    max-height: 400px;
+    padding: 10px 25px;
 }
 .main__access {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 3%;
+}
+.image__access {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+img {
+    width: 90px;
 }

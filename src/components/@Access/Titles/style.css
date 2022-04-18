@@ -1,17 +1,17 @@
 .h1__access {
     font-weight: 700;
     font-size: 30px;
-    line-height: 44px;
     color: #162652;
     font-style: normal;
     text-align: center;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    margin-bottom: 25px !important;
 }
 .h3__access {
     font-style: normal;
     font-weight: 600;
     font-size: 20px;
-    line-height: 20px;
     text-align: center;
-    letter-spacing: 0.3px;
     color: #162652;
 }
