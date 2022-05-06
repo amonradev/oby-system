@@ -17,5 +17,5 @@ export const Login = () => {
                 <SubmitButton title="Entrar" />
             </div>
         </div>
-    )
+    );
 }
