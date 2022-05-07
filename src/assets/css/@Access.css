@@ -1,6 +1,9 @@
+/*
+    Style of general access pages
+*/
 body {
-    background-color: #162652;
-    font-family: 'Mulish', sans-serif;
+    background-color: var(--var-blue);
+    font-family: var(--var-font);
 }
 .card__access {
     background-color: #fff;
