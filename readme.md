@@ -7,5 +7,5 @@ Run yarn dev
 
 And that's it, the project is ready and running on your localhost 🚀
 
-If you want to test and/or see test coverage 👩‍💻
-Run yarn test & yarn coverage
+If you want to test and see test coverage 👩‍💻
+Run yarn test
