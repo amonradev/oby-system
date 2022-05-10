@@ -1,4 +1,3 @@
-import React from "react";
 import '../../assets/css/@Access.css';
 import { Input } from "../../components/@Access/Input";
 import { SubmitButton } from "../../components/@Access/SubmitButton";

@@ -1,4 +1,3 @@
-import React from "react";
 import './style.css';
 
 export const SubmitButton = ({title}, {onclick = 'javascript:void'}) => {
