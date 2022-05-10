@@ -2,8 +2,11 @@
     Style of general access pages
 */
 body {
-    background-color: var(--var-blue);
     font-family: var(--var-font);
+    background-color: var(--var-blue) !important;
+}
+button:hover {
+    cursor: pointer;
 }
 .card__access {
     background-color: #fff;
@@ -26,6 +29,6 @@ body {
     justify-content: center;
     align-items: center;
 }
-img {
-    width: 90px;
+.sidebar__img--oby {
+    width: 65px;
 }
