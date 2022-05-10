@@ -2,5 +2,48 @@
     Style of all sidebar components
 */
 .sidebar__div {
-    background-color: ;
+    background-color: var(--var-blue);
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    height: 100vh;
+}
+.sidebar__div--logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 10px;
+}
+.sidebar__label--title {
+    font-family: var(--var-font);
+    font-weight: 700;
+    font-size: 2rem;
+    color: #fff;
+}
+.sidebar__button {
+    background-color: transparent;
+    color: #A4A6B3;
+    font-family: var(--var-font);
+    font-size: 12px;
+    font-weight: 300;
+    border: none;
+}
+.sidebar__div--button:hover {
+    background-color: #9fa2b411;
+}
+.active {
+    background-color: #9fa2b411;
+    border-left: 2px solid #DDE2FF;
+}
+.active > button {
+    color: #fff;
+}
+.sidebar__div--button {
+    height: 35px;
+    display: flex;
+    cursor: pointer;
+}
+.sidebar__icon {
+    margin-right: 15px;
+    margin-left: 10px;
 }
