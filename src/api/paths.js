@@ -1,0 +1,1 @@
+export const javaApi = process.env.REACT_APP_JAVA_API
