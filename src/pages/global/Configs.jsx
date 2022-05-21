@@ -1,4 +1,13 @@
+import '../../assets/css/@Global.css';
+import { Sidebar } from "../../components/@Global/Sidebar/Sidebar";
 
 export const Configs = () => {
-    return <h1>Helloo configs</h1>
+    return (
+        <div className="page">
+            <Sidebar active='configs' />
+            <h1>
+                Hello World
+            </h1>
+        </div>
+    );
 }

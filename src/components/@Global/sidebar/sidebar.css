@@ -42,8 +42,13 @@
     height: 35px;
     display: flex;
     cursor: pointer;
+    align-items: center;
 }
 .sidebar__icon {
     margin-right: 15px;
     margin-left: 10px;
+}
+.sidebar__link {
+    display: flex;
+    text-decoration: none;
 }

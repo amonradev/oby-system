@@ -5,19 +5,7 @@ import {faGear,
         faChalkboardUser, 
         faBoxArchive} from "@fortawesome/free-solid-svg-icons";
 
-export const Sidebar = ({active, setActive}) => {
-
-    const pages = ['home', 'clients', 'products', 'configs'];
-
-    if(active != '') {
-        pages.map((pagina) => {
-            if(pagina == active) {
-                document.getElementById(pagina).classList.add('active');
-            } else {
-                document.getElementById(pagina).classList.remove('active');
-            }
-        });
-    }
+export const Sidebar = ({active}) => {
 
     return (
         <div className="sidebar__div">
@@ -25,10 +13,10 @@ export const Sidebar = ({active, setActive}) => {
                 <img src="src\assets\svg\oby.svg" className="sidebar__img--oby" />
                 <label className="sidebar__label--title">Oby</label>
             </div>
-            <SidebarButton name="Relatório Geral" icon={faHouse} page='home' action={() => setActive('home')} />
-            <SidebarButton name="Atendimentos" icon={faChalkboardUser} page='clients' action={() => setActive('clients')} />
-            <SidebarButton name="Estoque" icon={faBoxArchive} page='products' action={() => setActive('products')} />
-            <SidebarButton name="Configurações" icon={faGear} page='configs' action={() => setActive('configs')} />
+            <SidebarButton name="Relatório Geral" icon={faHouse} page='home' active={active} to='/pagina-inicial' />
+            <SidebarButton name="Atendimentos" icon={faChalkboardUser} active={active} page='clients' to='/clientes' />
+            <SidebarButton name="Estoque" icon={faBoxArchive} active={active} page='products' to='/produtos' />
+            <SidebarButton name="Configurações" icon={faGear} active={active} page='configs' to='/configuracoes' />
         </div>
     );
 }

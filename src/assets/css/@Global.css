@@ -10,7 +10,37 @@ button:hover {
     cursor: pointer;
 }
 
-.home {
+.page {
     display: flex;
     background-color: var(--var-gray);
+}
+.page__body {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    width: 80vw;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.right__infos {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+}
+.main__content {
+    display: flex;
+    flex-direction: row;
+}
+.infos {
+    padding: 15px 5px;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #DFE0EB;
+}
+.infos:last-child {
+    border-bottom: none !important;
+}
+.infos:first-child {
+    padding-top: 5px;
 }

@@ -1,0 +1,11 @@
+.page__title {
+    font-weight: 500;
+    color: #fff;
+    font-family: var(--var-font);
+    font-size: 22px;
+}
+.card__title {
+    font-weight: 600;
+    color: #000000;
+    font-size: 16px;
+}
