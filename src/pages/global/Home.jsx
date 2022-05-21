@@ -5,6 +5,7 @@ import { PageTitle } from "../../components/@Global/Titles/PageTitle";
 import { CardTitle } from "../../components/@Global/Titles/CardTitle";
 import { MainCard } from "../../components/@Global/Cards/MainCard";
 import {AreaChart, Area, CartesianGrid, XAxis, YAxis} from 'recharts';
+import { InfosTitles } from "../../components/@Global/Titles/InfosTitles";
 
 export const Home = () => {
     const dataTest = [
@@ -29,10 +30,10 @@ export const Home = () => {
                             <YAxis />
                         </AreaChart>
                         <div className="right__infos">
-                            <div className="infos"><label>Title</label><span>500</span></div>
-                            <div className="infos"><label>Title</label><span>500</span></div>
-                            <div className="infos"><label>Title</label><span>500</span></div>
-                            <div className="infos"><label>Title</label><span>500</span></div>
+                            <InfosTitles title="Title" quantity="500" />                            
+                            <InfosTitles title="Title" quantity="500" />                            
+                            <InfosTitles title="Title" quantity="500" />                            
+                            <InfosTitles title="Title" quantity="500" />                            
                         </div>
                     </div>
                 </MainCard>

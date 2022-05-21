@@ -9,3 +9,28 @@
     color: #000000;
     font-size: 16px;
 }
+.infos {
+    padding: 10px 5px;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #DFE0EB;
+}
+.infos:last-child {
+    border-bottom: none !important;
+}
+.infos:first-child {
+    padding-top: 5px;
+}
+.title__infos {
+    color: #9FA2B4;
+    font-family: var(--var-font);
+    font-weight: 400;
+    font-size: 15px;
+}
+.span__infos {
+    color: black;
+    font-family: var(--var-font);
+    font-weight: 900;
+    font-size: 18px;
+    margin-top: 4px;
+}
