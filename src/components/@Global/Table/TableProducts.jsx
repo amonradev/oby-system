@@ -1,14 +1,16 @@
 import { Actions } from './Actions';
 import './table.css';
+import { formatBrl } from '../../../utils/formaters/formatBrl';
 
-export const TableClients = ({data}) => {
+export const TableProducts = ({data}) => {
     return (
         <table>
             <thead>
                 <tr>
-                    <th>Nome/Idade</th>
-                    <th>Problema</th>
-                    <th>Satisfação</th>
+                    <th>Nome</th>
+                    <th>Quantidade</th>
+                    <th>Preço</th>
+                    <th>Solicitações</th>
                     <th></th>
                 </tr>
             </thead>
@@ -16,8 +18,9 @@ export const TableClients = ({data}) => {
                 {data.map(info => {
                     return (<tr key={info.id}>
                                 <td>{info.name || ' - '}</td>
-                                <td>{info.problem || ' - '}</td>
-                                <td>{info.satisfy || ' - '}</td>
+                                <td>{info.quantity || ' - '}</td>
+                                <td>{formatBrl(info.price)}</td>
+                                <td>{info.requests || ' - '}</td>
                                 <td><Actions /></td>
                             </tr>)
                 })}

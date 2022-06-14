@@ -2,6 +2,7 @@ table {
     font-family: var(--var-font);
     border-collapse: collapse;
     border-spacing: 0;
+    width: 100%;
 }
 th {
     color: #9FA2B4;
@@ -10,17 +11,20 @@ th:first-child {
     text-align: left;
 }
 th:nth-child(2) {
-    text-align: left;
+    text-align: center;
     padding-left: 10px;
 }
 td {
     color: #000;
+    text-align: center;
 }
 td:first-child {
-    width: 365px;
+    width: 290px;
+    text-align: left !important;
 }
 td:nth-child(2) {
     width: 150px;
+    text-align: center !important;
 }
 td:nth-last-child(2) {
     width: 115px;
