@@ -8,6 +8,7 @@ body {
 
 button:hover {
     cursor: pointer;
+    transition: 0.2s;
 }
 
 .page {
@@ -34,4 +35,10 @@ button:hover {
 }
 a:link, a:visited, a:hover, a:active {
     text-decoration: none !important;
+}
+.grid__buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 10px;
+    width: 100%;
 }
