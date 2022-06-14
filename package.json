@@ -13,13 +13,13 @@
     "@fortawesome/fontawesome-svg-core": "^6.1.1",
     "@fortawesome/free-solid-svg-icons": "^6.1.1",
     "@fortawesome/react-fontawesome": "^0.1.18",
+    "highcharts-react-official": "^3.1.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-hook-form": "^7.32.0",
     "react-router-dom": "6",
     "react-test-renderer": "^18.0.0",
-    "react-toastify": "^9.0.4",
-    "recharts": "^2.1.10"
+    "react-toastify": "^9.0.4"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.16.11",
