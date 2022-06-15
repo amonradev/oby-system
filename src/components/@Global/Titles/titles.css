@@ -13,13 +13,9 @@
     padding: 10px 5px;
     display: flex;
     flex-direction: column;
-    border-bottom: 1px solid #DFE0EB;
-}
-.infos:last-child {
-    border-bottom: none !important;
 }
 .infos:first-child {
-    padding-top: 5px;
+    padding-top: 40px;
 }
 .title__infos {
     color: #9FA2B4;

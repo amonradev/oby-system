@@ -4,16 +4,32 @@ import '../../assets/css/@Global.css';
 import { PageTitle } from "../../components/@Global/Titles/PageTitle";
 import { CardTitle } from "../../components/@Global/Titles/CardTitle";
 import { MainCard } from "../../components/@Global/Cards/MainCard";
-import {AreaChart, Area, CartesianGrid, XAxis, YAxis} from 'recharts';
 import { InfosTitles } from "../../components/@Global/Titles/InfosTitles";
+import Highcharts from "highcharts/highstock";
+import HighchartsReact from 'highcharts-react-official'
 
 export const Home = () => {
-    const dataTest = [
-        {name: 'Geeksforgeeks', students: 400},
-        {name: 'Technical scripter', students: 700},
-        {name: 'Geek-i-knack', students: 200},
-        {name: 'Geek-o-mania', students: 1000}
-      ];
+    const dataTest = {
+        chart: {
+            type: 'spline'
+        },
+        title: {
+            text: 'Relatório'
+        },
+        series: [
+            {   
+                name: 'Meta Mensal',
+                data: [500, 400, 500, 600, 700, 700, 600, 500]
+            },
+            {   
+                name: 'Atendidos',
+                data: [111, 300, 450, 550, 480, 490, 300, 500]
+            },
+        ],
+        xAxis: {
+            categories: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto']
+        }
+    };
 
     return (
         <div className="page">
@@ -23,17 +39,21 @@ export const Home = () => {
                 <MainCard>
                     <CardTitle title="Gráfico de Atendimentos" />
                     <div className="main__content">
-                        <AreaChart width={500} height={300} data={dataTest}>
-                            <Area dataKey="students" fill="blue" stroke="blue" />
-                            <CartesianGrid stroke="#ccc" />
-                            <XAxis dataKey="name" />
-                            <YAxis />
-                        </AreaChart>
+                        <div className="highchart__div">
+                            <HighchartsReact
+                                highcharts={Highcharts}
+                                options={dataTest}
+                                containerProps={{ style: { 
+                                                    width: "100%",
+                                                    height: "100%" 
+                                                    } 
+                                                }}
+                            />
+                        </div>
                         <div className="right__infos">
-                            <InfosTitles title="Title" quantity="500" />                            
-                            <InfosTitles title="Title" quantity="500" />                            
-                            <InfosTitles title="Title" quantity="500" />                            
-                            <InfosTitles title="Title" quantity="500" />                            
+                            <InfosTitles title="Clientes" quantity="500" />                            
+                            <InfosTitles title="Produtos" quantity="500" />                            
+                            <InfosTitles title="Qualidade" quantity="500" />                            
                         </div>
                     </div>
                 </MainCard>

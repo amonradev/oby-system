@@ -22,10 +22,6 @@ td:first-child {
     width: 290px;
     text-align: left !important;
 }
-td:nth-child(2) {
-    width: 150px;
-    text-align: center !important;
-}
 td:nth-last-child(2) {
     width: 115px;
     text-align: center;
@@ -39,22 +35,17 @@ td, th {
 tbody > tr:nth-of-type(even) {
     background-color: #d1d1d1;
 }
-
-.dropdown {
-    position: relative;
-    display: inline-block;
+.actions {
+    display: flex;
+    flex-direction: row;   
 }
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    padding: 12px 16px;
-    z-index: 1;
+.actions__delete {
+    color: #c82333;
 }
-
-.dropdown:hover .dropdown-content {
-    display: block;
+.actions__edit {
+    color: #0069d9;
+    padding-left: 5px;
+}
+.actions__delete:hover, .actions__edit:hover {
+    cursor: pointer;
 }
