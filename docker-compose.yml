@@ -1,0 +1,16 @@
+version: '3.7'
+
+services:
+
+  react-frontend:
+    container_name: oby-system
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - '.:/oby-system'
+      - '/oby-system/node_modules'
+    ports:
+      - '3000:3000'
+    environment:
+      - NODE_ENV=development
