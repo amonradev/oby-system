@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Sidebar } from "../../components/@Global/Sidebar/Sidebar";
 import '../../assets/css/@Global.css';
 import { PageTitle } from "../../components/@Global/Titles/PageTitle";
@@ -7,8 +7,52 @@ import { MainCard } from "../../components/@Global/Cards/MainCard";
 import { InfosTitles } from "../../components/@Global/Titles/InfosTitles";
 import Highcharts from "highcharts/highstock";
 import HighchartsReact from 'highcharts-react-official'
+import { useState } from "react";
+import axios from 'axios';
+import { api } from "../../api/paths";
 
 export const Home = () => {
+
+    const [clients, setClients] = useState([]);
+    const [products, setProducts] = useState([]);
+    const [satisfaction, setSatisfaction] = useState('0%');
+
+    useEffect(() => {
+        function fetchData () {
+                axios({
+                    url: `${api}/clients`,
+                    method: 'GET',
+                }).then(res => {
+                    setClients(res.data.length);
+
+                    let satis = 0;
+                    res.data.map(data => {
+                        satis += parseInt(data.satisfaction || 0)
+                    });
+                    setSatisfaction(`${satis}%`);
+                }).catch(err => {
+                    ErrorToast('Ocorreu um erro!');
+                    console.log(err);
+                })
+        }
+        fetchData();
+    }, [''])
+
+    useEffect(() => {
+        function fetchData () {
+                axios({
+                    url: `${api}/products`,
+                    method: 'GET',
+                }).then(res => {
+                    setProducts(res.data.length);
+                }).catch(err => {
+                    ErrorToast('Ocorreu um erro!');
+                    console.log(err);
+                })
+        }
+        fetchData();
+    }, [''])
+
     const dataTest = {
         chart: {
             type: 'spline'
@@ -51,9 +95,9 @@ export const Home = () => {
                             />
                         </div>
                         <div className="right__infos">
-                            <InfosTitles title="Clientes" quantity="500" />                            
-                            <InfosTitles title="Produtos" quantity="500" />                            
-                            <InfosTitles title="Qualidade" quantity="500" />                            
+                            <InfosTitles title="Clientes" quantity={clients} />                            
+                            <InfosTitles title="Produtos" quantity={products} />                            
+                            <InfosTitles title="Satisfação" quantity={satisfaction} />                            
                         </div>
                     </div>
                 </MainCard>

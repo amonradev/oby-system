@@ -4,9 +4,33 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Popup from "reactjs-popup";
 import 'reactjs-popup/dist/index.css';
 import './actionsModal.css';
+import { api } from "../../../api/paths";
+import { ErrorToast } from "../../../utils/Global/ErrorToast";
+import axios from 'axios';
 
-export const Actions = ({id}) => {
+export const Actions = ({id, type}) => {
 
+    const deleteItem = (id, type) => {
+        const path = `${api}/${type == 'products' ? 'products' : 'clients'}`;
+
+        console.log(path)
+        axios({
+            url: path,
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            data: {
+                id
+            }
+        }).then(res => {
+            console.log(res);
+            SuccessToast('Sucesso! Registro apagado com sucesso!')
+        }).catch(err => {
+            console.log(err);
+            ErrorToast('Ops... Aconteceu um erro!');
+        })
+    }
     return (
         <div className="actions">
             <Popup
@@ -33,7 +57,7 @@ export const Actions = ({id}) => {
                         >
                             Fechar
                         </button>
-                        <button>
+                        <button onClick={() => deleteItem(id, type)}>
                             Excluir
                         </button>
                     </div>

@@ -18,7 +18,7 @@ export const TableClients = ({data}) => {
                                 <td>{info.name || ' - '}</td>
                                 <td>{info.problem || ' - '}</td>
                                 <td>{info.satisfy || ' - '}</td>
-                                <td><Actions /></td>
+                                <td><Actions id={info.id} type="clients" /></td>
                             </tr>)
                 })}
             </tbody>

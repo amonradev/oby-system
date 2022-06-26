@@ -21,7 +21,7 @@ export const TableProducts = ({data}) => {
                                 <td>{info.quantity || ' - '}</td>
                                 <td>{formatBrl(info.price)}</td>
                                 <td>{info.requests || ' - '}</td>
-                                <td><Actions /></td>
+                                <td><Actions id={info.id} type="products" /></td>
                             </tr>)
                 })}
             </tbody>

@@ -1,1 +1,1 @@
-export const javaApi = process.env.REACT_APP_JAVA_API
+export const api = 'http://localhost:8080/api';
