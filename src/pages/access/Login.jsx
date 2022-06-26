@@ -43,7 +43,7 @@ export const Login = () => {
                         <label htmlFor="senha" className="label__input__access">Senha</label>
                         <input type="password" name="senha" placeholder="Senha" className="input__access" {...register("password", {required: true})} />
                     </div>
-                    <SubmitButton title="Entrar" />
+                    <SubmitButton title="Entrar:" />
                 </form>
             </div>
         </div>
