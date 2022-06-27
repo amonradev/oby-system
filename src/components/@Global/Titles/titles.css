@@ -30,3 +30,15 @@
     font-size: 18px;
     margin-top: 4px;
 }
+.div__title__button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.new__register {
+    background-color: #0069d9;
+    color: #fff;
+    padding: 5px;
+    font-size: 24px;
+    border-radius: 5px;
+}

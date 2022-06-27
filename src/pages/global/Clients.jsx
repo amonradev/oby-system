@@ -32,7 +32,7 @@ export const Clients = () => {
             <div className="page__body">
                 <PageTitle title="Atendimentos" />
                 <MainCard>
-                    <CardTitle title="Clientes" />
+                    <CardTitleWithButton title="Clientes" type="clients" />
                     <div className="main__content">
                         <TableClients data={data} />
                     </div>

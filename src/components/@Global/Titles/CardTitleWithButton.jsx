@@ -1,16 +1,16 @@
+import './titles.css';
 import React from "react";
-import {faCircleXmark, faPenToSquare} from "@fortawesome/free-solid-svg-icons";
+import {faPlus} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Popup from "reactjs-popup";
 import 'reactjs-popup/dist/index.css';
-import './actionsModal.css';
 import { api } from "../../../api/paths";
 import { ErrorToast } from "../../../utils/Global/ErrorToast";
 import { SuccessToast } from "../../../utils/Global/SuccessToast";
 import axios from 'axios';
 import { useForm } from 'react-hook-form';
 
-export const Actions = ({id, type}) => {
+export const CardTitleWithButton = ({title, type}) => {
     const { register, handleSubmit, formState: { errors } } = useForm();
 
     const submit = (data) => {
@@ -31,58 +31,11 @@ export const Actions = ({id, type}) => {
         })
     }
 
-    const deleteItem = (id, type) => {
-        const path = `${api}/${type == 'products' ? 'products' : 'clients'}/${id}`;
-
-        axios({
-            url: path,
-            method: 'DELETE',
-        }).then(res => {
-            SuccessToast('Sucesso! Registro apagado com sucesso!')
-            setTimeout(() => {
-                window.location.reload(true);
-            }, "1500")
-        }).catch(err => {
-            console.log(err);
-            ErrorToast('Ops... Aconteceu um erro!');
-        })
-    }
     return (
-        <div className="actions">
+        <div className='div__title__button'>
+            <h2 className='card__title'>{title}</h2>
             <Popup
-                trigger={<FontAwesomeIcon className="actions__delete" icon={faCircleXmark} />}
-                modal
-                nested
-            >
-                {close => (
-                <div className="modal">
-                    <button className="close" onClick={close}>
-                    &times;
-                    </button>
-                    <div className="header"> Apagar Registro </div>
-                    <div className="content">
-                    {' '}
-                    Você realmente deseja apagar esse registro?
-                    </div>
-                    <div className="actions">
-                        <button
-                            className="button"
-                            onClick={() => {
-                            close();
-                            }}
-                        >
-                            Fechar
-                        </button>
-                        <button onClick={() => deleteItem(id, type)}>
-                            Excluir
-                        </button>
-                    </div>
-                </div>
-                )}
-            </Popup>         
-
-            <Popup
-                trigger={<FontAwesomeIcon className="actions__edit" icon={faPenToSquare} />}
+                trigger={<FontAwesomeIcon className="new__register" icon={faPlus} />}
                 modal
                 nested
             >
