@@ -2,25 +2,27 @@
     display: flex;
     flex-direction: column;
     margin-top: 15px;
+    align-items: baseline;
 }
 .label__input__access {
-    font-style: normal;
-    font-weight: 600;
-    font-size: 11px;
-    text-transform: uppercase;
-    color: #162652;
-    font-family: 'Mulish', sans-serif;
-    margin-bottom: 5px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 11px;
+  /* text-transform: uppercase; */
+  color: #162652;
+  font-family: "Mulish", sans-serif;
+  margin-bottom: 5px;
 }
 .input__access {
-    background: #FCFDFE;
-    border: 1px solid #162652;
-    box-sizing: border-box;
-    border-radius: 4px;
-    padding: 6px;
-    font-family: 'Mulish', sans-serif;
+  height: 34px;
+  /* width: 100%; */
+  position: relative;
+  background-color: #f7f7f7;
+  border: 1px solid #e6e6e6;
+  border-radius: 10px;
+  width: 300px;
 }
 .input__access::placeholder {
-    color: #a3a3a3;
-    font-size: 11px;
+  color: #a3a3a3;
+  font-size: 11px;
 }

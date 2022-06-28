@@ -1,36 +1,82 @@
 .modal {
-    font-size: 12px;
-  }
-  .modal > .header {
-    width: 100%;
-    border-bottom: 1px solid gray;
-    font-size: 18px;
-    text-align: center;
+  font-size: 12px;
+  background-color: white;
+  color: #fff;
+}
+.modal > .header {
+  width: 100%;
+  /* border-bottom: 1px solid gray; */
+  font-size: 18px;
+  text-align: center;
+  padding: 5px;
+  color: black;
+}
+ .content {
+  width: 100%;
+  padding: 10px 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.actions {
+  width: 100%;
+  padding: 10px 5px;
+  margin: auto;
+  text-align: center;
+  justify-content: flex-end;
+}
+.modal > .close {
+  cursor: pointer;
+  position: absolute;
+  display: block;
+  padding: 2px 5px;
+  line-height: 20px;
+  right: -10px;
+  top: -10px;
+  font-size: 24px;
+  background: #ffffff;
+  border-radius: 18px;
+  border: 1px solid #cfcece;
+}
+.modal > .close:focus-visible {
+  outline: none;
+}
+
+.modal > .button {
+  appearance: none;
+  background: #16a34a;
+  border-radius: 0.25em;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 500;
+  height: 3em;
+  line-height: 3em;
+  padding: 0 1em;
+}
+.submit {
+  appearance: none;
+  background: #16a34a;
+  border-radius: 0.25em;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 500;
+  height: 3em;
+  line-height: 3em;
+  padding: 0 1em;
+  border: none;
+}
+
+.button {
+  background-color: #ed6755;
+    border: none;
+    border-radius: 0.25em;
+    width: 72px;
+    height: 40px;
     padding: 5px;
-  }
-  .modal > .content {
-    width: 100%;
-    padding: 10px 5px;
-  }
-  .modal > .actions {
-    width: 100%;
-    padding: 10px 5px;
-    margin: auto;
-    text-align: center;
-  }
-  .modal > .close {
-    cursor: pointer;
-    position: absolute;
-    display: block;
-    padding: 2px 5px;
-    line-height: 20px;
-    right: -10px;
-    top: -10px;
-    font-size: 24px;
-    background: #ffffff;
-    border-radius: 18px;
-    border: 1px solid #cfcece;
-  }
-  .modal > .close:focus-visible {
-    outline: none;
-  }
+    font-weight: 500;
+    /* font-size: 16px; */
+    color: white;
+    margin-right: 15px;
+}

@@ -117,15 +117,15 @@ export const Actions = ({id, type}) => {
                     </div>
                     <div className="actions">
                         <button
-                            className="button"
+                            className="submit"
                             onClick={() => {
                             close();
                             }}
                         >
-                            Fechar
+                            Salvar
                         </button>
-                        <button type="submit">
-                            AKAK
+                        <button type="button" className="button">
+                            Fechar
                         </button>
                     </div>
                     </form>

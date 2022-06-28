@@ -10,13 +10,15 @@ button:hover {
 }
 .card__access {
     background-color: #fff;
-    border: 1px solid #DFE0EB;
-    box-sizing: border-box;
-    border-radius: 8px;
-    width: 31%;
+    /* border: 1px solid #DFE0EB; */
+    /* box-sizing: border-box; */
+    /* border-radius: 8px; */
+    width: 60%;
     min-height: 385px;
     max-height: 385px;
     padding: 25px 28px;
+    border-bottom-left-radius: 85px;
+    border-top-right-radius: 85px;
 }
 .main__access {
     display: flex;
@@ -24,11 +26,17 @@ button:hover {
     justify-content: center;
     margin-top: 3%;
 }
-.image__access {
+/* .image__access {
     display: flex;
     justify-content: center;
     align-items: center;
-}
+} */
 .sidebar__img--oby {
     width: 50px;
+}
+
+.div_inside_acess {
+ display: flex;
+ flex-direction: column;
+ 
 }

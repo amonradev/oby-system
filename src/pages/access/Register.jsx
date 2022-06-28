@@ -8,9 +8,9 @@ export const Register = () => {
     return (
         <div className="main__access">
             <div className="card__access">
-                <div className="image__access">
+                {/* <div className="image__access">
                     <img src="src/assets/svg/oby.svg" alt="" />
-                </div>
+                </div> */}
                 <Title title="Oby System" />
                 <SubTitle title="Digite seu email para solicitar acesso ao sistema" />
                 <Input name="Email" />
