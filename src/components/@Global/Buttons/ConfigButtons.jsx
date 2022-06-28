@@ -1,9 +1,9 @@
 import React from 'react';
 import './buttons.css';
 
-export const ConfigButtons = ({name, action}) => {
+export const ConfigButtons = ({name}) => {
 
     return (
-        <button onClick={action} className="config">{name}</button>
+        <button className="config">{name}</button>
     )
 }

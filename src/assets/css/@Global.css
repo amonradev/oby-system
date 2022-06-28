@@ -48,3 +48,14 @@ a:link, a:visited, a:hover, a:active {
 .highcharts-axis-title {
     display: none;
 }
+.link__config {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.link__config > .config {
+    background-color: transparent;
+}
+.link__config > .config:hover {
+    color: #fff;
+}
