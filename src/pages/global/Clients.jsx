@@ -6,6 +6,7 @@ import { MainCard } from '../../components/@Global/Cards/MainCard';
 import { Sidebar } from "../../components/@Global/Sidebar/Sidebar";
 import { TableClients } from '../../components/@Global/Table/TableClients';
 import { CardTitle } from '../../components/@Global/Titles/CardTitle';
+import { CardTitleWithButton } from '../../components/@Global/Titles/CardTitleWithButton';
 import { PageTitle } from '../../components/@Global/Titles/PageTitle';
 
 export const Clients = () => {
@@ -32,7 +33,7 @@ export const Clients = () => {
             <div className="page__body">
                 <PageTitle title="Atendimentos" />
                 <MainCard>
-                    <CardTitle title="Clientes" />
+                    <CardTitleWithButton title="Clientes" type="clients" />
                     <div className="main__content">
                         <TableClients data={data} />
                     </div>

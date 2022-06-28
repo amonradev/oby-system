@@ -9,6 +9,7 @@ import { CardTitle } from '../../components/@Global/Titles/CardTitle';
 import { PageTitle } from '../../components/@Global/Titles/PageTitle';
 import { ErrorToast } from '../../utils/Global/ErrorToast';
 import { ToastContainer } from 'react-toastify';
+import { CardTitleWithButton } from '../../components/@Global/Titles/CardTitleWithButton';
 
 export const Products = () => {
     const [data, setData] = useState([]);
@@ -45,7 +46,7 @@ export const Products = () => {
             <div className="page__body">
                 <PageTitle title="Produtos" />
                 <MainCard>
-                    <CardTitle title="Lista de Produtos" />
+                    <CardTitleWithButton title="Lista de Produtos" type="products" />
                     <div className="main__content">
                         <TableProducts data={data} />
                     </div>
