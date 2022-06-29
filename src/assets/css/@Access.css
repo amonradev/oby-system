@@ -10,9 +10,6 @@ button:hover {
 }
 .card__access {
     background-color: #fff;
-    /* border: 1px solid #DFE0EB; */
-    /* box-sizing: border-box; */
-    /* border-radius: 8px; */
     width: 60%;
     min-height: 385px;
     max-height: 385px;
@@ -24,13 +21,14 @@ button:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 3%;
+    margin-top: 8%;
 }
-/* .image__access {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
+.image__access {
+    width: 370px;
+}
+.image__access > img {
+    width: 100%;
+}
 .sidebar__img--oby {
     width: 50px;
 }
@@ -39,4 +37,9 @@ button:hover {
  display: flex;
  flex-direction: column;
  
+}
+.card__login {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
 }

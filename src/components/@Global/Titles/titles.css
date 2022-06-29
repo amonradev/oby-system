@@ -21,13 +21,13 @@
     color: #9FA2B4;
     font-family: var(--var-font);
     font-weight: 400;
-    font-size: 15px;
+    font-size: 24px;
 }
 .span__infos {
     color: black;
     font-family: var(--var-font);
     font-weight: 900;
-    font-size: 18px;
+    font-size: 22px;
     margin-top: 4px;
 }
 .div__title__button {

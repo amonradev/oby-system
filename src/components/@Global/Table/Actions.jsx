@@ -62,18 +62,20 @@ export const Actions = ({id, type}) => {
                     <div className="header"> Apagar Registro </div>
                     <div className="content">
                     {' '}
-                    Você realmente deseja apagar esse registro?
+                    <h1>
+                        Você realmente deseja apagar esse registro?
+                    </h1>
                     </div>
                     <div className="actions">
                         <button
-                            className="button"
+                            className="close"
                             onClick={() => {
                             close();
                             }}
                         >
                             Fechar
                         </button>
-                        <button onClick={() => deleteItem(id, type)}>
+                        <button className="button" onClick={() => deleteItem(id, type)}>
                             Excluir
                         </button>
                     </div>

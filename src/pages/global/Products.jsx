@@ -29,29 +29,34 @@ export const Products = () => {
         fetchData();
     }, [''])
 
-    return (
-        <div className="page">
-            <ToastContainer
-                position="top-right"
-                autoClose={3000}
-                hideProgressBar={false}
-                newestOnTop={false}
-                closeOnClick
-                rtl={false}
-                pauseOnFocusLoss
-                draggable
-                pauseOnHover
-            />
-            <Sidebar active='products' />
-            <div className="page__body">
-                <PageTitle title="Produtos" />
-                <MainCard>
-                    <CardTitleWithButton title="Lista de Produtos" type="products" />
-                    <div className="main__content">
-                        <TableProducts data={data} />
+    const isLogged = sessionStorage.getItem('isLogged');
+    if(isLogged) {
+            return (
+                <div className="page">
+                    <ToastContainer
+                        position="top-right"
+                        autoClose={3000}
+                        hideProgressBar={false}
+                        newestOnTop={false}
+                        closeOnClick
+                        rtl={false}
+                        pauseOnFocusLoss
+                        draggable
+                        pauseOnHover
+                    />
+                    <Sidebar active='products' />
+                    <div className="page__body">
+                        <PageTitle title="Produtos" />
+                        <MainCard>
+                            <CardTitleWithButton title="Lista de Produtos" type="products" />
+                            <div className="main__content">
+                                <TableProducts data={data} />
+                            </div>
+                        </MainCard>
                     </div>
-                </MainCard>
-            </div>
-        </div>
-    );
+                </div>
+            );
+    } else {
+        return <h1>Você não pode acessar esse conteúdo. Faça login!</h1>
+    } 
 }

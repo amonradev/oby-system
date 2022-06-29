@@ -11,7 +11,6 @@ export const Routing = () => {
     <BrowserRouter>
         <Routes>
             <Route path='/' element={<Login />} />
-            <Route path='/cadastro' element={<Register />} />
             <Route path='/pagina-inicial' element={<Home />} />
             <Route path='/produtos' element={<Products />} />
             <Route path='/clientes' element={<Clients />} />

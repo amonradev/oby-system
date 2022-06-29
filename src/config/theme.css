@@ -7,3 +7,6 @@
     --var-gray: #3D3D3D;
     --var-hover-blue: #30447c;
 }
+*:focus-visible {
+    outline: none;
+}

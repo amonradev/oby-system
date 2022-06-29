@@ -74,34 +74,38 @@ export const Home = () => {
             categories: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto']
         }
     };
-
-    return (
-        <div className="page">
-            <Sidebar active='home' />
-            <div className="page__body">
-                <PageTitle title="Relatório Geral" />
-                <MainCard>
-                    <CardTitle title="Gráfico de Atendimentos" />
-                    <div className="main__content">
-                        <div className="highchart__div">
-                            <HighchartsReact
-                                highcharts={Highcharts}
-                                options={dataTest}
-                                containerProps={{ style: { 
-                                                    width: "100%",
-                                                    height: "100%" 
-                                                    } 
-                                                }}
-                            />
+    const isLogged = sessionStorage.getItem('isLogged');
+    if(isLogged) {
+        return (
+            <div className="page">
+                <Sidebar active='home' />
+                <div className="page__body">
+                    <PageTitle title="Relatório Geral" />
+                    <MainCard>
+                        <CardTitle title="Gráfico de Atendimentos" />
+                        <div className="main__content">
+                            <div className="highchart__div">
+                                <HighchartsReact
+                                    highcharts={Highcharts}
+                                    options={dataTest}
+                                    containerProps={{ style: { 
+                                                        width: "700px",
+                                                        height: "400px" 
+                                                        } 
+                                                    }}
+                                />
+                            </div>
+                            <div className="right__infos">
+                                <InfosTitles title="Clientes" quantity={clients} />                            
+                                <InfosTitles title="Produtos" quantity={products} />                            
+                                <InfosTitles title="Satisfação" quantity={satisfaction} />                            
+                            </div>
                         </div>
-                        <div className="right__infos">
-                            <InfosTitles title="Clientes" quantity={clients} />                            
-                            <InfosTitles title="Produtos" quantity={products} />                            
-                            <InfosTitles title="Satisfação" quantity={satisfaction} />                            
-                        </div>
-                    </div>
-                </MainCard>
+                    </MainCard>
+                </div>
             </div>
-        </div>
-    );
-}
+        );
+    } else {
+        return <h1>Você não pode acessar esse conteúdo. Faça login!</h1>
+    }
+}   

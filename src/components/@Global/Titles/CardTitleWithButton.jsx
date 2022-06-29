@@ -9,6 +9,7 @@ import { ErrorToast } from "../../../utils/Global/ErrorToast";
 import { SuccessToast } from "../../../utils/Global/SuccessToast";
 import axios from 'axios';
 import { useForm } from 'react-hook-form';
+import '../Table/actionsModal.css';
 
 export const CardTitleWithButton = ({title, type}) => {
     const { register, handleSubmit, formState: { errors } } = useForm();
@@ -48,7 +49,7 @@ export const CardTitleWithButton = ({title, type}) => {
                     <form onSubmit={handleSubmit(submit)}>
                     <div className="content">
                     {' '}
-                        <div className="div__input__access">
+                    <div className="div__input__access">
                             <label htmlFor="Email" className="label__input__access">Nome</label>
                             <input type="email" name="Email" placeholder="Email" className="input__access" {...register("email", { required: true })} />
                         </div>
@@ -84,15 +85,15 @@ export const CardTitleWithButton = ({title, type}) => {
                     </div>
                     <div className="actions">
                         <button
-                            className="button"
+                            className="submit"
                             onClick={() => {
                             close();
                             }}
                         >
-                            Fechar
+                            Salvar
                         </button>
-                        <button type="submit">
-                            AKAK
+                        <button type="button" className="button">
+                            Fechar
                         </button>
                     </div>
                     </form>

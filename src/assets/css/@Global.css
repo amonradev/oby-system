@@ -10,7 +10,9 @@ button:hover {
     cursor: pointer;
     transition: 0.2s;
 }
-
+svg:hover {
+    cursor: pointer;
+}
 .page {
     display: flex;
     background-color: var(--var-gray);

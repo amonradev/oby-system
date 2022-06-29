@@ -3,7 +3,6 @@
     justify-content: center;
     align-items: center;
     padding: 0 20px;
-    /* width: 100%; */
     height: 34px;
     width: 300px;
     background-color: #162652;
@@ -18,6 +17,7 @@
     transition: all 0.4s;
     position: relative;
     z-index: 1;
+    border: none;
 }
 .card__button {
     margin-top: 20px;

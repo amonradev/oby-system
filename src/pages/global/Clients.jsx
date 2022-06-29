@@ -27,18 +27,23 @@ export const Clients = () => {
         fetchData();
     }, [''])
 
-    return (
-        <div className="page">
-            <Sidebar active='clients' />
-            <div className="page__body">
-                <PageTitle title="Atendimentos" />
-                <MainCard>
-                    <CardTitleWithButton title="Clientes" type="clients" />
-                    <div className="main__content">
-                        <TableClients data={data} />
+    const isLogged = sessionStorage.getItem('isLogged');
+    if(isLogged) {
+            return (
+                <div className="page">
+                    <Sidebar active='clients' />
+                    <div className="page__body">
+                        <PageTitle title="Atendimentos" />
+                        <MainCard>
+                            <CardTitleWithButton title="Lista de Atendimentos" type="clients" />
+                            <div className="main__content">
+                                <TableClients data={data} />
+                            </div>
+                        </MainCard>
                     </div>
-                </MainCard>
-            </div>
-        </div>
-    );
+                </div>
+            );
+    } else {
+        return <h1>Você não pode acessar esse conteúdo. Faça login!</h1>
+    }
 }

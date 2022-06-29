@@ -33,43 +33,45 @@ export const Login = () => {
         draggable
         pauseOnHover
       />
-      <div className="card__access">
-        {/* <div className="image__access">
-                    <img src="src/assets/svg/img01.png" alt="" />
-                </div> */}
-        <Title title="Bem-Vindo!" />
-        <form onSubmit={handleSubmit(onSubmit)}>
-          <div className="div__input__access">
-            <div className="div_inside_acess">
-              <label htmlFor="Email" className="label__input__access">
-                Email:
+      <div className="card__access card__login">
+        <div className="image__access">
+            <img src="src/assets/svg/img01.png" alt="" />
+        </div>
+        <div>
+          <Title title="Bem-Vindo!" />
+          <form onSubmit={handleSubmit(onSubmit)}>
+            <div className="div__input__access">
+              <div className="div_inside_acess">
+                <label htmlFor="Email" className="label__input__access">
+                  Email:
+                </label>
+                <input
+                  type="email"
+                  name="Email"
+                  placeholder="Digite seu email"
+                  className="input__access"
+                  {...register("email", { required: true })}
+                />
+              </div>
+            </div>
+            <div className="div__input__access">
+                <div className="div_inside_acess">
+                <label htmlFor="senha" className="label__input__access">
+                Senha:
               </label>
               <input
-                type="email"
-                name="Email"
-                placeholder="Digite seu email"
+                type="password"
+                name="senha"
+                placeholder="Digite sua senha"
                 className="input__access"
-                {...register("email", { required: true })}
+                {...register("password", { required: true })}
               />
+                </div>
+              
             </div>
-          </div>
-          <div className="div__input__access">
-              <div className="div_inside_acess">
-              <label htmlFor="senha" className="label__input__access">
-              Senha:
-            </label>
-            <input
-              type="password"
-              name="senha"
-              placeholder="Digite sua senha"
-              className="input__access"
-              {...register("password", { required: true })}
-            />
-              </div>
-            
-          </div>
-          <SubmitButton title="Entrar" />
-        </form>
+            <SubmitButton title="Entrar" />
+          </form>
+        </div>
       </div>
     </div>
   );
