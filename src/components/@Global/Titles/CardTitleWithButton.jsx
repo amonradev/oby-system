@@ -50,45 +50,43 @@ export const CardTitleWithButton = ({title, type}) => {
                     <div className="content">
                     {' '}
                     <div className="div__input__access">
-                            <label htmlFor="Email" className="label__input__access">Nome</label>
-                            <input type="email" name="Email" placeholder="Email" className="input__access" {...register("email", { required: true })} />
+                            <label htmlFor="Nome" className="label__input__access">Nome</label>
+                            <input type="text" name="Nome" placeholder="Nome" className="input__access" {...register("name", { required: true })} />
                         </div>
                         {type == 'clients' ?
                         <div className="div__input__access">
-                            <label htmlFor="senha" className="label__input__access">Problema</label>
-                            <input type="password" name="senha" placeholder="Senha" className="input__access" {...register("password", { required: true })} />
+                            <label htmlFor="Descrição" className="label__input__access">Descrição</label>
+                            <input type="text" name="Descrição" placeholder="Descrição" className="input__access" {...register("description", { required: true })} />
                         </div>
                         :
                         <div className="div__input__access">
-                            <label htmlFor="senha" className="label__input__access">QTD</label>
-                            <input type="password" name="senha" placeholder="Senha" className="input__access" {...register("password", { required: true })} />
+                            <label htmlFor="Quantidade" className="label__input__access">QTD</label>
+                            <input type="text" name="Quantidade" placeholder="Quantidade" className="input__access" {...register("quantity", { required: true })} />
                         </div>
                         }
                         {type == 'products' && 
                         <div className="div__input__access">
-                            <label htmlFor="senha" className="label__input__access">Preço</label>
-                            <input type="password" name="senha" placeholder="Senha" className="input__access" {...register("password", { required: true })} />
+                            <label htmlFor="Preço" className="label__input__access">Preço</label>
+                            <input type="text" name="Preço" placeholder="Preço" className="input__access" {...register("price", { required: true })} />
                         </div>
                         }
 
                         {type == 'clients' ?
                         <div className="div__input__access">
-                            <label htmlFor="senha" className="label__input__access">Satisfação</label>
-                            <input type="password" name="senha" placeholder="Senha" className="input__access" {...register("password", { required: true })} />
+                            <label htmlFor="Satisfação" className="label__input__access">Satisfação</label>
+                            <input type="text" name="Satisfação" placeholder="Satisfação" className="input__access" {...register("satisfaction", { required: true })} />
                         </div>                        
                         :
                         <div className="div__input__access">
-                            <label htmlFor="senha" className="label__input__access">Solicitações</label>
-                            <input type="password" name="senha" placeholder="Senha" className="input__access" {...register("password", { required: true })} />
+                            <label htmlFor="Solicitações" className="label__input__access">Solicitações</label>
+                            <input type="text" name="Solicitações" placeholder="Solicitações" className="input__access" {...register("requests", { required: true })} />
                         </div>
                         }
                     </div>
                     <div className="actions">
                         <button
                             className="submit"
-                            onClick={() => {
-                            close();
-                            }}
+                            type="submit"
                         >
                             Salvar
                         </button>

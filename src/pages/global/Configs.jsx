@@ -58,25 +58,23 @@ export const Configs = () => {
                                             <button className="close" onClick={close}>
                                             &times;
                                             </button>
-                                            <div className="header"> Editar Registro </div>
+                                            <div className="header"> Novo Cadastro </div>
                                             <form onSubmit={handleSubmit(submit)}>
                                             <div className="content">
                                             {' '}
                                                 <div className="div__input__access">
-                                                    <label htmlFor="Email" className="label__input__access">Nome</label>
+                                                    <label htmlFor="Email" className="label__input__access">Email</label>
                                                     <input type="email" name="Email" placeholder="Email" className="input__access" {...register("email", { required: true })} />
                                                 </div>
                                                 <div className="div__input__access">
-                                                    <label htmlFor="password" className="label__input__access">Nome</label>
+                                                    <label htmlFor="password" className="label__input__access">Senha</label>
                                                     <input type="password" name="password" placeholder="Senha" className="input__access" {...register("password", { required: true })} />
                                                 </div>
                                             </div>
                                             <div className="actions">
                                                 <button
                                                     className="submit"
-                                                    onClick={() => {
-                                                    close();
-                                                    }}
+                                                    type="submit"
                                                 >
                                                     Salvar
                                                 </button>
@@ -87,43 +85,7 @@ export const Configs = () => {
                                             </form>
                                         </div>
                                         )}
-                                    </Popup>         
-                                <Popup
-                                        trigger={<button className="config">Excluir usuário</button>}
-                                        modal
-                                        nested
-                                    >
-                                        {close => (
-                                        <div className="modal">
-                                            <button className="close" onClick={close}>
-                                            &times;
-                                            </button>
-                                            <div className="header"> Editar Registro </div>
-                                            <form onSubmit={handleSubmit(submit)}>
-                                            <div className="content">
-                                            {' '}
-                                                <div className="div__input__access">
-                                                    <label htmlFor="Email" className="label__input__access">Nome</label>
-                                                    <input type="email" name="Email" placeholder="Email" className="input__access" {...register("email", { required: true })} />
-                                                </div>
-                                            </div>
-                                            <div className="actions">
-                                                <button
-                                                    className="close"
-                                                    onClick={() => {
-                                                    close();
-                                                    }}
-                                                >
-                                                    Fechar
-                                                </button>
-                                                <button className="button" onClick={() => deleteItem(id, type)}>
-                                                    Excluir
-                                                </button>
-                                            </div>
-                                            </form>
-                                        </div>
-                                        )}
-                                    </Popup>         
+                                    </Popup>            
                                     <ConfigButtons name="Contatar o suporte" onClick={() => window.open('https://wa.me/message/2QPA5QQHTHQSL1', '_blank', 'popup')} />
                                     <Link to="/"  onClick={() => sessionStorage.removeItem('isLogged')} className="config link__config">
                                         <ConfigButtons name="Sair" />
